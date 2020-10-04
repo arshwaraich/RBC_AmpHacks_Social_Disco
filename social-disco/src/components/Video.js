@@ -7,7 +7,7 @@ function Video() {
     return (
         <div style={{
             padding: "1em",
-            height: "calc(100vh - 2em)",
+            height: "100vh",
             display: "flex",
             flexDirection: "column"
         }}>

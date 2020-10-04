@@ -13,3 +13,9 @@
 .padding-top30{
   padding-top: 30px;
 }
+
+h1 {
+  font-size: 2rem !important;
+  margin: 0.8rem 0 !important;
+  font-weight: bold !important;
+}
