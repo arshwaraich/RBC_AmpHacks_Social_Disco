@@ -5,6 +5,7 @@ import Signup from './components/Signup';
 import Name from './components/Name';
 import Interests from './components/Interests';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Video from './components/Video';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/signup" component={Signup}/>
           <Route path="/name" component={Name}/>
           <Route path="/interests" component={Interests}/>
+          <Route path="/video" component={Video}/>
         </Switch>
       </div>
     </Router>
