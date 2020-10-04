@@ -1,6 +1,5 @@
 import React from 'react';
 import '../App.css';
-import { Link } from 'react-router-dom';
 import Webcam from "react-webcam";
 
 function Video() {
@@ -62,9 +61,9 @@ const WebcamStreamCapture = () => {
 
     const handleDownload = React.useCallback(() => {
         if (recordedChunks.length) {
-            const blob = new Blob(recordedChunks, {
-                type: "video/webm"
-            });
+            // const blob = new Blob(recordedChunks, {
+            //     type: "video/webm"
+            // });
             // Saving video file
             // const url = URL.createObjectURL(blob);
             // const a = document.createElement("a");
@@ -115,7 +114,7 @@ const WebcamStreamCapture = () => {
                                 height: "3em",
                                 padding: "10px 15px",
                             }}
-                                onClick={handleStopCaptureClick}><i class="material-icons">stop</i>Stop</button>
+                                onClick={handleStopCaptureClick}><i className="material-icons">stop</i>Stop</button>
                         ) : (
                                 <button style={{
                                     borderRadius: "100px",
@@ -131,7 +130,7 @@ const WebcamStreamCapture = () => {
                                     height: "3em",
                                     padding: "10px 15px",
                                 }}
-                                    onClick={handleStartCaptureClick}><i class="material-icons">camera_alt</i>Record</button>
+                                    onClick={handleStartCaptureClick}><i className="material-icons">camera_alt</i>Record</button>
                             )) :
                         (
                             <>
@@ -149,7 +148,7 @@ const WebcamStreamCapture = () => {
                                     height: "3em",
                                     padding: "10px 15px",
                                 }}
-                                    onClick={handleStartCaptureClick}><i class="material-icons">refresh</i>Retry</button>
+                                    onClick={handleStartCaptureClick}><i className="material-icons">refresh</i>Retry</button>
                                 <button style={{
                                     borderRadius: "100px",
                                     border: "0px",
