@@ -6,38 +6,62 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Form, Container } from 'react-bootstrap';
 
 function Signup() {
-  return (
-    <Container>
+    return (
+        <Container>
             <div className="logo">
-                <img src={logo} alt="logo"/>
+                <img src={logo} alt="logo" />
+            </div>
+            <button size="lg" style={{
+                background: "#E36A4F",
+                border: "none",
+                width: "calc(100% - 2em)",
+                padding: "1em",
+                borderRadius: "5px",
+                fontWeight: "bold",
+                color: "white"
+            }}>Sign up with Google</button>
+            <div style={{
+                display: "flex",
+                alignItems: "center"
+            }}>
+                <hr style={{ width: "100%" }} />
+                OR
+                <hr style={{ width: "100%" }} />
             </div>
             <Form>
                 <Form.Group controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
                     <Form.Control type="email" placeholder="Enter email" />
-                    <Form.Text className="text-muted">
-                        We'll never share your email with anyone else.
-                    </Form.Text>
                 </Form.Group>
 
                 <Form.Group controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
                     <Form.Control type="password" placeholder="Password" />
                 </Form.Group>
                 <div className="padding-top20">
-                <Button variant="success" size="lg" type="submit">
-                    Sign Up
-                </Button>
+                    <button size="lg" style={{
+                        background: "#E36A4F",
+                        border: "none",
+                        width: "calc(100% - 2em)",
+                        padding: "1em",
+                        borderRadius: "5px",
+                        fontWeight: "bold",
+                        color: "white"
+                    }} type="submit">
+                        Sign Up
+                </button>
                 </div>
             </Form>
-            <div className="padding-top30">
-                <p>Have an account?</p>
+            <div className="padding-top30"
+                style={{
+                    display: "flex",
+                    justifyContent: "center"
+                }}>
+                <p>Have an account?&nbsp;</p>
+                <Link to="/login">
+                    <p>Log In</p>
+                </Link>
             </div>
-            <Link to="/login">
-                <h5>Log In</h5>
-            </Link>
         </Container>
-  );
+    );
 }
 
 export default Signup;
