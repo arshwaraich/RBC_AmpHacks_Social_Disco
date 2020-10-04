@@ -28,7 +28,6 @@ function Video() {
 };
 
 const WebcamStreamCapture = () => {
-    cons
     const webcamRef = React.useRef(null);
     const mediaRecorderRef = React.useRef(null);
     const [capturing, setCapturing] = React.useState(false);
