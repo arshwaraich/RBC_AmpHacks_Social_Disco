@@ -25,9 +25,11 @@ function Signup() {
                     <Form.Control type="password" placeholder="Password" />
                 </Form.Group>
                 <div className="padding-top20">
+                <Link to="/name">
                 <Button variant="success" size="lg" type="submit">
                     Sign Up
                 </Button>
+                </Link>
                 </div>
             </Form>
             <div className="padding-top30">
