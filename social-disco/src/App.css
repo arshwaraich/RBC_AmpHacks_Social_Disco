@@ -1,3 +1,15 @@
 .App {
   text-align: center;
 }
+
+.logo{
+  padding: 30px 0 30px 0;
+}
+
+.padding-top20{
+  padding-top: 20px;
+}
+
+.padding-top30{
+  padding-top: 30px;
+}
