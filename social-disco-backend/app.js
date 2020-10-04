@@ -13,7 +13,6 @@ require('./models/db');
 //Add router
 var routes = require('./routes/index');
 var user = require('./routes/user');
-var service = require('./routes/service');
 var auth = require('./routes/auth');
 
 var app = express();
@@ -32,7 +31,6 @@ app.use(express.static('src'));
 app.use('/', routes);
 app.use('/api/auth', auth);
 app.use('/api/users', user);
-app.use('/api/service',service);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
