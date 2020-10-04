@@ -1,4 +1,7 @@
 var express = require('express');
+const { v4: uuidv4 } = require('uuid');
+var multer  = require('multer');
+var path = require('path');
 var router = express.Router();
 
 var userController = require('../controllers/userController');
@@ -8,12 +11,12 @@ var userController = require('../controllers/userController');
 const storage = multer.diskStorage({
     destination: path.join(__dirname, '../src/videos'),
     filename: function (req, file, cb) {
-        cb(null, Date.now() + path.extname(file.originalname));
+        cb(null, uuidv4() + path.extname(file.originalname));
     }
 });
 
 
-const upload = multer();
+const upload = multer({storage: storage});
 
 
 router.get('/', (req, res) => {
@@ -76,17 +79,29 @@ router.put('/', (req, res) => {
 }
 );
 
-router.post("/uploadImage", upload.single("image"), async (req, res) => {
-
-    const imagePath = path.join(__dirname, '../src/images');
-    const fileUpload = new Resize(imagePath);
-
+router.post("/uploadVideo", upload.single("video"), async (req, res) => {
+    
     if (!req.file) {
-        res.status(401).json({ error: 'Please provide an image' });
+        res.status(401).json({ error: 'Please provide a video' });
     }
 
-    const filename = await fileUpload.save(req.file.buffer);
-    return res.status(200).json({ fileUrl: 'http://172.104.66.32:3000/' + path.join(__dirname, '../src/images/') + filename });
+    //Set video name
+    req.body.videoLink = req.file.filename;
+
+    userController.update(req.body)
+    .then(
+        (data) => {
+            res.json(data);
+        }
+    )
+    .catch(
+        error => {
+            res.json({message: error});
+        }
+    )
+    console.log(req.file.filename);
+    
+    return res.status(200).json({ fileUrl: 'http://localhost:3000/videos/' + req.file.filename });
 });
 
 module.exports = router;
