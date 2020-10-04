@@ -25,9 +25,11 @@ function Login() {
                     <Form.Control type="password" placeholder="Password" />
                 </Form.Group>
                 <div className="padding-top20">
+                <Link to="/video">
                 <Button variant="success" size="lg" type="submit">
                     Log In
                 </Button>
+                </Link>
                 </div>
             </Form>
             <div className="padding-top30">
