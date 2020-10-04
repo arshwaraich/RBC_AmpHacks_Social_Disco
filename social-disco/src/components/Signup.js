@@ -3,7 +3,7 @@ import '../App.css';
 import logo from '../images/logo.png';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Form, Container, Row, Col } from 'react-bootstrap';
+import { Button, Form, Container } from 'react-bootstrap';
 
 function Signup() {
   return (

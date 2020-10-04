@@ -7,6 +7,7 @@ import Interests from './components/Interests';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Video from './components/Video';
 import Matches from './components/Matches';
+import Swipe from './components/Swipe';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/interests" component={Interests}/>
           <Route path="/video" component={Video}/>
           <Route path="/matches" component={Matches}/>
+          <Route path="/swipe" component={Swipe}/>
         </Switch>
       </div>
     </Router>
