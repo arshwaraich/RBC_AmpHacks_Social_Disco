@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
-function Interests() {
+function Matches() {
   return (
     <div style={{
       padding: "1em",
@@ -13,7 +13,7 @@ function Interests() {
       <h1 style={{
         color: '#E36A4F',
         textAlign: "left"
-      }}>What do you like...</h1>
+      }}>Your Matches:</h1>
       <div style={{
         width: "100%",
         height: "100%",
@@ -111,7 +111,7 @@ function Interests() {
               width: "9em",
               height: "3em",
               padding: "10px 15px",
-            }}>Skip</button>
+            }}>Back</button>
           </Link>
         </div>
       </div>
@@ -119,4 +119,4 @@ function Interests() {
   );
 }
 
-export default Interests;
+export default Matches;

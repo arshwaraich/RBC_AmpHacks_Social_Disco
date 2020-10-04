@@ -6,6 +6,7 @@ import Name from './components/Name';
 import Interests from './components/Interests';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Video from './components/Video';
+import Matches from './components/Matches';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/name" component={Name}/>
           <Route path="/interests" component={Interests}/>
           <Route path="/video" component={Video}/>
+          <Route path="/matches" component={Matches}/>
         </Switch>
       </div>
     </Router>
