@@ -14,5 +14,7 @@ mongoose.connect(dburl1,{useNewUrlParser: true},(err)=>
     }
 });
 
-require('../Schema/ServiceSchema');
-require('../Schema/userSchema')
+require('../Schema/userSchema');
+require('../Schema/groupSchema');
+require('../Schema/interestSchema');
+require('../Schema/activitySchema');
